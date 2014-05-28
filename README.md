@@ -24,3 +24,4 @@ AuthConfigure({
     registerComplete: null // function() 
 });   
 ```
+can see application for a detailed [example](https://github.com/waydin/auth/tree/master/example).
