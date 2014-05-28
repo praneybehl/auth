@@ -1,0 +1,13 @@
+<head>
+  <title>example</title>
+</head>
+
+<body>
+  {{> hello }}
+</body>
+
+<template name="hello">
+    {{ authError }}
+    {{> login }}
+    {{> register }}
+</template>

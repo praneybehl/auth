@@ -1,0 +1,30 @@
+<template name="login">
+    <form id="AuthLoginForm" method="POST" accept-charset="UTF-8">
+        <div class="auth-formline">
+            <input type="text" id="login_email" name="login[email]" placeholder="Email Address">
+        </div>
+        <div class="auth-formline">
+            <input type="password" id="login_password" name="login[password]" placeholder="Password">
+        </div>
+        <div class="auth-formline">
+            <input name="commit" type="submit" value="Log In"> 
+        </div>
+    </form>
+</template>
+
+<template name="register">
+    <form id="AuthRegisterForm" method="POST" accept-charset="UTF-8">
+        <div class="auth-formline">
+            <input type="text" id="register_username" name="register[username]" placeholder="Username">
+        </div>
+        <div class="auth-formline">
+            <input type="text" id="register_email" name="register[email]" placeholder="Email Address">
+        </div>
+        <div class="auth-formline">
+            <input type="password" id="register_password" name="register[password]" placeholder="Password">
+        </div>
+        <div class="auth-formline">
+            <input name="commit" type="submit" value="Register"> 
+        </div>
+    </form>
+</template>
