@@ -3,6 +3,6 @@
   "description": "Meteor’s accounts api makes easy login and register.",
   "homepage": "https://github.com/waydin/auth",
   "author": "Yasar ICLI <hello@yasaricli.com>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "git": "https://github.com/waydin/auth.git"
 }
