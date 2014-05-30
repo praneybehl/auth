@@ -7,7 +7,7 @@
             <input type="password" id="login_password" name="login[password]" placeholder="Password">
         </div>
         <div class="auth-formline">
-            <input name="commit" type="submit" value="Log In"> 
+            <input name="commit" class="{{ conf.loginBtnClass }}" type="submit" value="Log In"> 
         </div>
     </form>
 </template>
@@ -24,7 +24,7 @@
             <input type="password" id="register_password" name="register[password]" placeholder="Password">
         </div>
         <div class="auth-formline">
-            <input name="commit" type="submit" value="Register"> 
+            <input name="commit" class="{{ conf.registerBtnClass }}" type="submit" value="Register"> 
         </div>
     </form>
 </template>

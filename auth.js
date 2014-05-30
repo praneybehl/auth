@@ -1,14 +1,16 @@
 (function() {
     var root = this,
-        Templates, Valid, error, Conf;
+        Templates, Valid, error, Conf, HelperContext; 
 
     Conf = {
         loginRequiredText: 'Please fill in all required fields',
         loginErrorText: 'The email or password was incorrect',
         registerCompleteText: 'Have you successfully register',
         registerEmailValidText: 'Please enter a valid email address.',
+        loginBtnClass: 'btn btn-login',
+        registerBtnClass: 'btn btn-register',
         loginComplete: null,
-        registerComplete: null 
+        registerComplete: null
     };
 
     // Configure Auth
@@ -27,12 +29,18 @@
         }
     };
 
+    HelperContext = {
+        conf: function() {
+            return Conf;
+        }
+    };
+
     authError = function(text) { Session.set('authError', text); };
     onConf = function(fn) { Conf[fn] && Conf[fn](); };
 
     Templates = {
         Login: {
-            Helpers: {},
+            Helpers: _.extend({}, HelperContext),
             Events: {
                 'submit #AuthLoginForm': function(e, t) {
                     e.preventDefault();
@@ -53,7 +61,7 @@
             }
         },
         Register: {
-            Helpers: { },
+            Helpers: _.extend({}, HelperContext),
             Events: {
                 'submit #AuthRegisterForm': function(e, t) {
                     e.preventDefault();
