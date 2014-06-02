@@ -7,6 +7,7 @@
         loginErrorText: 'The email or password was incorrect',
         registerCompleteText: 'Have you successfully register',
         registerEmailValidText: 'Please enter a valid email address.',
+        registerRequiredText: 'Please fill in all required fields',
         loginBtnClass: 'btn btn-login',
         registerBtnClass: 'btn btn-register',
         loginComplete: null,
@@ -85,6 +86,8 @@
                             authError(false);
                             onConf('registerComplete');
                         });
+                    } else {
+                        authError(Conf.registerRequiredText);
                     }
                 }
             }
